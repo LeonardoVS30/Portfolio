@@ -49,7 +49,7 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-3">
               <Terminal className="w-8 h-8 text-primary chrome-glow" />
-              <span className="text-2xl chrome-text">DEV.EXE</span>
+              <span className="text-2xl chrome-text">Leonardo Verdesoto</span>
             </div>
             
             <p className="text-muted-foreground leading-relaxed max-w-md">
@@ -96,7 +96,7 @@ export function Footer() {
                 className="flex items-center text-muted-foreground hover:text-primary transition-colors group"
               >
                 <Mail className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                dev@tudominio.com
+                verdesotoleonardo@gmail.com
               </a>
               
               <div className="flex space-x-3">
@@ -121,13 +121,13 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
           {/* Copyright */}
           <div className="flex items-center space-x-2 text-muted-foreground text-sm">
-            <span>© {currentYear} DEV.EXE</span>
+            <span>© {currentYear} Leonardo Verdesoto</span>
             <span>•</span>
             <span>Hecho con</span>
             <Heart className="w-4 h-4 text-secondary animate-pulse" />
             <span>y</span>
             <Coffee className="w-4 h-4 text-accent" />
-            <span>en España</span>
+            <span>en Ecuador</span>
           </div>
 
           {/* Tech Credit */}

@@ -23,7 +23,7 @@ export function HeroSection() {
           <WindowsXPWindow title="Notepad - curriculum.txt" icon={<NotepadIcon />} className="w-64 text-xs">
             <div className="p-3 h-32 font-mono">
               <div className="text-blue-600">// Backend Developer</div>
-              <div>Name: Tu Nombre</div>
+              <div>Name: Leonardo Verdesoto</div>
               <div>Skills: C#, .NET, APIs</div>
               <div>Experience: 5+ años</div>
               <div className="text-green-600">Status: Available</div>
@@ -93,7 +93,7 @@ export function HeroSection() {
           {/* Main Title */}
           <div className="mb-6">
             <h1 className="mb-2 text-6xl md:text-8xl chrome-text">
-              DEV<span className="text-primary">.</span>NET
+              Leonardo<span className="text-primary"> </span>Verdesoto
             </h1>
             <div className="flex items-center justify-center space-x-2 mb-4">
               <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent flex-1"></div>
@@ -104,10 +104,10 @@ export function HeroSection() {
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Especialista en <span className="text-primary chrome-glow">C# .NET</span> con pasión por crear
-            <span className="text-secondary chrome-glow"> APIs robustas</span> y 
-            <span className="text-accent chrome-glow"> soluciones escalables</span>. 
-            Transformando ideas en código de alta calidad.
+          Desarrollador junior especializado en <span className="text-primary chrome-glow">C# .NET</span> con un enfoque en la creación de
+            <span className="text-secondary chrome-glow"> soluciones eficientes </span> y 
+            <span className="text-accent chrome-glow"> escalables</span>. 
+            Me apasiona aprender y mejorar mis habilidades en el desarrollo de software.
           </p>
 
           {/* CTA Buttons */}
@@ -125,6 +125,7 @@ export function HeroSection() {
               variant="outline" 
               size="lg"
               className="chrome-border bg-transparent text-primary hover:bg-primary/10 transition-all duration-300"
+              onClick={() => window.open('/Leonardo Efrain Verdesoto Santana.pdf', '_blank')}
             >
               <Download className="mr-2 w-4 h-4" />
               Descargar CV
@@ -133,13 +134,28 @@ export function HeroSection() {
 
           {/* Social Links */}
           <div className="flex justify-center space-x-6">
-            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary transition-colors">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="text-muted-foreground hover:text-primary transition-colors"
+              onClick={() => window.open('https://github.com/LeonardoVS30', '_blank')}
+            >
               <Github className="w-5 h-5" />
             </Button>
-            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-secondary transition-colors">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="text-muted-foreground hover:text-secondary transition-colors"
+              onClick={() => window.open('https://linkedin.com/in/leonardo-vs30', '_blank')}
+            >
               <Linkedin className="w-5 h-5" />
             </Button>
-            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-accent transition-colors">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="text-muted-foreground hover:text-accent transition-colors"
+              onClick={() => window.open('mailto:verdesotoleonardo@gmail.com', '_blank')}
+            >
               <Mail className="w-5 h-5" />
             </Button>
           </div>

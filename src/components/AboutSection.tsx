@@ -7,14 +7,14 @@ import { ExplorerIcon, MediaPlayerIcon } from './XPIcons';
 
 export function AboutSection() {
   const achievements = [
-    { icon: Trophy, label: "5+ Años", desc: "Experiencia" },
-    { icon: Target, label: "100+", desc: "Proyectos" },
+    { icon: Trophy, label: "2+ Años", desc: "Experiencia" },
+    { icon: Target, label: "10+", desc: "Proyectos" },
     { icon: Zap, label: "99.9%", desc: "Uptime" },
   ];
 
   const interests = [
-    "Gaming Retro", "Arquitectura de Software", "Cloud Computing", 
-    "DevOps", "Microservicios", "Performance Optimization"
+    "Arquitectura de Software", "Desarrollo de Software", 
+    "Microservicios", "Performance Optimization", "Ciberseguridad", "Música", 
   ];
 
   return (
@@ -109,18 +109,10 @@ export function AboutSection() {
                 <h3 className="text-2xl chrome-text">Mi Historia</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Soy un desarrollador backend apasionado por la tecnología .NET y la arquitectura de software. 
-                Mi viaje comenzó en la era dorada de los videojuegos, donde aprendí que el código debe ser 
-                <span className="text-primary"> elegante</span>, 
-                <span className="text-secondary"> eficiente</span> y 
+              Como desarrollador backend, he aprendido a apreciar la importancia de un código limpio y eficiente. Mi interés por la tecnología .NET me ha permitido desarrollar aplicaciones que son tanto
+                <span className="text-secondary"> funcionales</span> como 
                 <span className="text-accent"> escalable</span>.
               </p>
-              
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Especializado en crear APIs robustas, sistemas distribuidos y soluciones cloud-native 
-                que pueden manejar millones de requests. Mi filosofía: "El código es poesía, la arquitectura es arte."
-              </p>
-
               <div className="flex items-center mb-4">
                 <Server className="w-6 h-6 text-secondary mr-3 y2k-glow" />
                 <h4 className="text-xl text-secondary">Especialidades</h4>

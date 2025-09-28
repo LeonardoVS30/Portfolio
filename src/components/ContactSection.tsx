@@ -22,28 +22,28 @@ export function ContactSection() {
     {
       icon: Mail,
       label: "Email",
-      value: "dev@tudominio.com",
-      href: "mailto:dev@tudominio.com",
+      value: "verdesotoleonardo@gmail.com",
+      href: "mailto:verdesotoleonardo@gmail.com",
       color: "text-primary"
     },
     {
       icon: Phone,
       label: "Teléfono",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+593 97 962 6374",
+      href: "tel:+593979626374",
       color: "text-secondary"
     },
     {
       icon: MapPin,
       label: "Ubicación",
-      value: "Madrid, España",
+      value: "Guayaquil, Ecuador",
       href: "#",
       color: "text-accent"
     },
     {
       icon: Globe,
       label: "Timezone",
-      value: "CET (UTC+1)",
+      value: "ECT (GMT-5)",
       href: "#",
       color: "text-primary"
     }
@@ -65,7 +65,7 @@ export function ContactSection() {
     {
       icon: Twitter,
       label: "Twitter",
-      href: "https://twitter.com",
+      href: "https://twitter.com",  
       color: "hover:text-accent"
     }
   ];
@@ -251,8 +251,7 @@ export function ContactSection() {
               ¿Listo para comenzar tu proyecto?
             </h3>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Desde APIs robustas hasta arquitecturas complejas, estoy aquí para convertir tus ideas 
-              en soluciones backend de clase enterprise. Hablemos sobre cómo puedo ayudarte.
+            Desde APIs hasta arquitecturas complejas, estoy aquí para ayudarte
             </p>
             <Button 
               size="lg" 

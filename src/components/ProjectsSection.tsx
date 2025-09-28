@@ -51,8 +51,8 @@ export function ProjectsSection() {
   ];
 
   const stats = [
-    { label: "Proyectos Completados", value: "50+", icon: Server },
-    { label: "APIs Desarrolladas", value: "100+", icon: Database },
+    { label: "Proyectos Completados", value: "10+", icon: Server },
+    { label: "APIs Desarrolladas", value: "10+", icon: Database },
     { label: "Uptime Promedio", value: "99.9%", icon: Cloud },
   ];
 

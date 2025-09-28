@@ -21,7 +21,7 @@ export function Header() {
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <Terminal className="w-6 h-6 text-primary chrome-glow" />
-              <span className="text-xl chrome-text">DEV.EXE</span>
+              <span className="text-xl chrome-text">Leonardo Verdesoto</span>
             </div>
 
             {/* Desktop Navigation */}

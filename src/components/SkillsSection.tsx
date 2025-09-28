@@ -23,10 +23,10 @@ export function SkillsSection() {
       icon: Code2,
       color: "text-primary",
       skills: [
-        { name: "C#", level: 95, description: "Lenguaje principal con 5+ años" },
-        { name: "ASP.NET Core", level: 90, description: "APIs REST y GraphQL" },
-        { name: "Entity Framework", level: 85, description: "ORM y Code First" },
-        { name: "LINQ", level: 90, description: "Consultas avanzadas" },
+        { name: "C#", level: 80, description: "Lenguaje principal" },
+        { name: "ASP.NET Core", level: 75, description: "APIs REST y GraphQL" },
+        { name: "Entity Framework", level: 75, description: "ORM y Code First" },
+        { name: "LINQ", level: 60, description: "Consultas avanzadas" },
       ]
     },
     {
@@ -34,10 +34,10 @@ export function SkillsSection() {
       icon: Database,
       color: "text-secondary",
       skills: [
-        { name: "SQL Server", level: 90, description: "T-SQL, stored procedures" },
-        { name: "PostgreSQL", level: 80, description: "RDBMS avanzado" },
-        { name: "Redis", level: 75, description: "Caching y sesiones" },
-        { name: "MongoDB", level: 70, description: "NoSQL y agregaciones" },
+        { name: "SQL Server", level: 80, description: "T-SQL, stored procedures" },
+        { name: "PostgreSQL", level: 55, description: "RDBMS avanzado" },
+        { name: "Redis", level: 45, description: "Caching y sesiones" },
+        { name: "MongoDB", level: 50, description: "NoSQL y agregaciones" },
       ]
     },
     {
@@ -45,10 +45,10 @@ export function SkillsSection() {
       icon: Cloud,
       color: "text-accent",
       skills: [
-        { name: "Azure", level: 85, description: "App Services, Functions, SQL" },
-        { name: "Docker", level: 80, description: "Containerización" },
-        { name: "CI/CD", level: 75, description: "Azure DevOps, GitHub Actions" },
-        { name: "Kubernetes", level: 65, description: "Orquestación básica" },
+        { name: "Azure", level: 70, description: "App Services, Functions, SQL" },
+        { name: "Docker", level: 75, description: "Containerización" },
+        { name: "CI/CD", level: 55, description: "Azure DevOps, GitHub Actions" },
+        { name: "Kubernetes", level: 45, description: "Orquestación básica" },
       ]
     },
     {
@@ -56,10 +56,10 @@ export function SkillsSection() {
       icon: Settings,
       color: "text-primary",
       skills: [
-        { name: "Microservicios", level: 85, description: "Diseño distribuido" },
-        { name: "Domain-Driven Design", level: 80, description: "DDD patterns" },
-        { name: "SOLID Principles", level: 90, description: "Código limpio" },
-        { name: "Design Patterns", level: 85, description: "GoF patterns" },
+        { name: "Microservicios", level: 70, description: "Diseño distribuido" },
+        { name: "Domain-Driven Design", level: 60, description: "DDD patterns" },
+        { name: "SOLID Principles", level: 65, description: "Código limpio" },
+        { name: "Design Patterns", level: 60, description: "GoF patterns" },
       ]
     }
   ];
@@ -76,10 +76,7 @@ export function SkillsSection() {
   ];
 
   const certifications = [
-    "Microsoft Certified: Azure Developer Associate",
-    "Microsoft Certified: Azure Fundamentals", 
-    "Clean Code & SOLID Principles",
-    "ASP.NET Core Advanced Patterns"
+    "Microsoft Certified: Foundational C# Certification",
   ];
 
   return (
