@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from './ui/button';
 import { Download, Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
@@ -82,7 +83,7 @@ export function HeroSection() {
               <div className="absolute -inset-4 bg-gradient-to-r from-primary via-secondary to-accent rounded-full blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative">
                 <ImageWithFallback
-                  src="/Leonardo_sqr_c.jpeg"
+                  src="https://github.com/LeonardoVS30/Portfolio/blob/773fc55bdc2bca78fe1d99b6a083daead2406934/Leonardo_sqr_c.jpeg"
                   alt="Leonardo Verdesoto"
                   className="w-32 h-32 rounded-full object-cover border-4 border-primary y2k-glow"
                 />
