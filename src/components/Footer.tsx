@@ -1,3 +1,4 @@
+import React from 'react';
 import { Card } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -130,11 +131,6 @@ export function Footer() {
             <span>en Ecuador</span>
           </div>
 
-          {/* Tech Credit */}
-          <div className="flex items-center space-x-2 text-muted-foreground text-sm">
-            <Code2 className="w-4 h-4" />
-            <span>Powered by React + Tailwind CSS</span>
-          </div>
 
           {/* Back to Top */}
           <Button

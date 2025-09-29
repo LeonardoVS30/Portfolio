@@ -82,8 +82,8 @@ export function HeroSection() {
               <div className="absolute -inset-4 bg-gradient-to-r from-primary via-secondary to-accent rounded-full blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1631624220291-8f191fbdb543?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWJlcnB1bmslMjBkZXZlbG9wZXIlMjBjb2Rpbmd8ZW58MXx8fHwxNzU5MDIxNDI1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Desarrollador Backend"
+                  src="/Leonardo_sqr_c.jpeg"
+                  alt="Leonardo Verdesoto"
                   className="w-32 h-32 rounded-full object-cover border-4 border-primary y2k-glow"
                 />
               </div>

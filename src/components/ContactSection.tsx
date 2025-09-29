@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Card } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -10,7 +11,6 @@ import {
   MapPin, 
   Github, 
   Linkedin, 
-  Twitter,
   Send,
   Calendar,
   Clock,
@@ -18,6 +18,41 @@ import {
 } from 'lucide-react';
 
 export function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const { name, email, subject, message } = formData;
+    const emailBody = `Hola Leonardo,
+
+Mi nombre es ${name || '[Nombre no proporcionado]'}${email ? ` (${email})` : ''}.
+
+${subject ? `Asunto: ${subject}` : ''}
+
+${message || '[Mensaje no proporcionado]'}
+
+Saludos,
+${name || '[Nombre no proporcionado]'}`;
+
+    const mailtoLink = `mailto:verdesotoleonardo@gmail.com?subject=${encodeURIComponent(subject || 'Consulta desde Portfolio')}&body=${encodeURIComponent(emailBody)}`;
+    
+    window.open(mailtoLink, '_blank');
+  };
+
   const contactInfo = [
     {
       icon: Mail,
@@ -61,12 +96,6 @@ export function ContactSection() {
       label: "LinkedIn",
       href: "https://linkedin.com",
       color: "hover:text-secondary"
-    },
-    {
-      icon: Twitter,
-      label: "Twitter",
-      href: "https://twitter.com",  
-      color: "hover:text-accent"
     }
   ];
 
@@ -107,12 +136,14 @@ export function ContactSection() {
               <h3 className="text-2xl chrome-text">Envíame un mensaje</h3>
             </div>
             
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="name" className="text-foreground">Nombre</Label>
                   <Input
                     id="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     placeholder="Tu nombre"
                     className="bg-input-background border-border focus:border-primary transition-colors"
                   />
@@ -122,6 +153,8 @@ export function ContactSection() {
                   <Input
                     id="email"
                     type="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     placeholder="tu@email.com"
                     className="bg-input-background border-border focus:border-primary transition-colors"
                   />
@@ -132,6 +165,8 @@ export function ContactSection() {
                 <Label htmlFor="subject" className="text-foreground">Asunto</Label>
                 <Input
                   id="subject"
+                  value={formData.subject}
+                  onChange={handleInputChange}
                   placeholder="¿En qué puedo ayudarte?"
                   className="bg-input-background border-border focus:border-primary transition-colors"
                 />
@@ -141,6 +176,8 @@ export function ContactSection() {
                 <Label htmlFor="message" className="text-foreground">Mensaje</Label>
                 <Textarea
                   id="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   placeholder="Cuéntame sobre tu proyecto..."
                   rows={5}
                   className="bg-input-background border-border focus:border-primary transition-colors resize-none"
@@ -244,24 +281,6 @@ export function ContactSection() {
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <Card className="bg-card/80 backdrop-blur-sm border-border y2k-border p-8 max-w-3xl mx-auto">
-            <h3 className="text-2xl mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent neon-text">
-              ¿Listo para comenzar tu proyecto?
-            </h3>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-            Desde APIs hasta arquitecturas complejas, estoy aquí para ayudarte
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-secondary to-accent hover:from-accent hover:to-secondary transition-all duration-300 y2k-glow"
-            >
-              <Calendar className="w-4 h-4 mr-2" />
-              Agendar una llamada
-            </Button>
-          </Card>
-        </div>
       </div>
     </section>
   );
