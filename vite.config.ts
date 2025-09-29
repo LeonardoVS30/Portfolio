@@ -8,6 +8,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+      // AÑADE ESTO TEMPORALMENTE
+      '@radix-ui/react-slot@1.1.2': '@radix-ui/react-slot',
     },
   },
   build: {
