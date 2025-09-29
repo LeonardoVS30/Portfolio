@@ -3,68 +3,24 @@ import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 
 export default defineConfig({
-  // Cambiado para Vercel - usar './' o eliminar completamente
   base: './',
   plugins: [react()],
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     alias: {
-      // Mantén solo los alias esenciales y elimina las versiones específicas
+      // Solo mantén el alias esencial para src
       '@': path.resolve(__dirname, './src'),
       
-      // Opcional: puedes mantener estos si son necesarios, pero sin versiones
-      'vaul': 'vaul',
-      'sonner': 'sonner',
-      'recharts': 'recharts',
-      'react-resizable-panels': 'react-resizable-panels',
-      'react-hook-form': 'react-hook-form',
-      'react-day-picker': 'react-day-picker',
-      'next-themes': 'next-themes',
-      'lucide-react': 'lucide-react',
-      'input-otp': 'input-otp',
-      'embla-carousel-react': 'embla-carousel-react',
-      'cmdk': 'cmdk',
-      'class-variance-authority': 'class-variance-authority',
-      
-      // Radix UI aliases sin versiones
-      '@radix-ui/react-tooltip': '@radix-ui/react-tooltip',
-      '@radix-ui/react-toggle': '@radix-ui/react-toggle',
-      '@radix-ui/react-toggle-group': '@radix-ui/react-toggle-group',
-      '@radix-ui/react-tabs': '@radix-ui/react-tabs',
-      '@radix-ui/react-switch': '@radix-ui/react-switch',
-      '@radix-ui/react-slot': '@radix-ui/react-slot',
-      '@radix-ui/react-slider': '@radix-ui/react-slider',
-      '@radix-ui/react-separator': '@radix-ui/react-separator',
-      '@radix-ui/react-select': '@radix-ui/react-select',
-      '@radix-ui/react-scroll-area': '@radix-ui/react-scroll-area',
-      '@radix-ui/react-radio-group': '@radix-ui/react-radio-group',
-      '@radix-ui/react-progress': '@radix-ui/react-progress',
-      '@radix-ui/react-popover': '@radix-ui/react-popover',
-      '@radix-ui/react-navigation-menu': '@radix-ui/react-navigation-menu',
-      '@radix-ui/react-menubar': '@radix-ui/react-menubar',
-      '@radix-ui/react-label': '@radix-ui/react-label',
-      '@radix-ui/react-hover-card': '@radix-ui/react-hover-card',
-      '@radix-ui/react-dropdown-menu': '@radix-ui/react-dropdown-menu',
-      '@radix-ui/react-dialog': '@radix-ui/react-dialog',
-      '@radix-ui/react-context-menu': '@radix-ui/react-context-menu',
-      '@radix-ui/react-collapsible': '@radix-ui/react-collapsible',
-      '@radix-ui/react-checkbox': '@radix-ui/react-checkbox',
-      '@radix-ui/react-avatar': '@radix-ui/react-avatar',
-      '@radix-ui/react-aspect-ratio': '@radix-ui/react-aspect-ratio',
-      '@radix-ui/react-alert-dialog': '@radix-ui/react-alert-dialog',
-      '@radix-ui/react-accordion': '@radix-ui/react-accordion',
+      // ELIMINA TODOS los aliases con versiones específicas
+      // Vite y npm ya manejan estas dependencias automáticamente
     },
   },
   build: {
     target: 'esnext',
-    // Cambiado a 'dist' para Vercel
-    outDir: 'dist',
-    emptyOutDir: true,
-    // Añade esta configuración para mejor compatibilidad
+    outDir: 'build',
+    // Añade esta configuración para mejor manejo de dependencias
     rollupOptions: {
-      output: {
-        manualChunks: undefined,
-      },
+      external: [],
     },
   },
   server: {
