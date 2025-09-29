@@ -8,20 +8,12 @@ export default defineConfig({
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     alias: {
-      // Solo mantén el alias esencial para src
       '@': path.resolve(__dirname, './src'),
-      
-      // ELIMINA TODOS los aliases con versiones específicas
-      // Vite y npm ya manejan estas dependencias automáticamente
     },
   },
   build: {
     target: 'esnext',
     outDir: 'build',
-    // Añade esta configuración para mejor manejo de dependencias
-    rollupOptions: {
-      external: [],
-    },
   },
   server: {
     port: 3000,
