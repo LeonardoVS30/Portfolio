@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { Menu, X, Terminal, Code2, User, Briefcase, Mail } from 'lucide-react';
 
@@ -18,13 +18,13 @@ export function Header() {
       <div className="retro-scan">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
-            {/* Logo */}
+            {/* Logo - Esquina superior izquierda - SIN MARGEN */}
             <div className="flex items-center space-x-2">
               <Terminal className="w-6 h-6 text-primary chrome-glow" />
               <span className="text-xl chrome-text">Leonardo Verdesoto</span>
             </div>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation - Esquina superior derecha - SIN MARGEN */}
             <nav className="hidden md:flex items-center space-x-6">
               <button
                 onClick={() => scrollToSection('home')}
@@ -63,7 +63,7 @@ export function Header() {
               </button>
             </nav>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - Esquina superior derecha - SIN MARGEN */}
             <Button
               variant="ghost"
               size="sm"

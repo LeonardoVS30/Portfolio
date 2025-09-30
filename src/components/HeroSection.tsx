@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button } from './ui/button';
+import { TypingText } from './ui/TypingText';
 import { Download, Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { WindowsXPWindow } from './WindowsXPWindow';
-import { NotepadIcon, CalculatorIcon } from './XPIcons';
+import { NotepadIcon, CalculatorIcon, MusicIcon, BookIcon, SoccerIcon, LearningIcon } from './XPIcons';
 
 export function HeroSection() {
   const scrollToSection = (sectionId: string) => {
@@ -17,22 +18,10 @@ export function HeroSection() {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       <div className="retro-scan absolute inset-0"></div>
       
-      {/* Animated Background Elements & XP Windows */}
-      <div className="absolute inset-0 opacity-60">
-        {/* Floating XP Windows */}
-        <div className="absolute top-16 left-10 transform rotate-12 animate-float">
-          <WindowsXPWindow title="Notepad - curriculum.txt" icon={<NotepadIcon />} className="w-64 text-xs">
-            <div className="p-3 h-32 font-mono">
-              <div className="text-blue-600">// Backend Developer</div>
-              <div>Name: Leonardo Verdesoto</div>
-              <div>Skills: C#, .NET, APIs</div>
-              <div>Experience: 5+ años</div>
-              <div className="text-green-600">Status: Available</div>
-            </div>
-          </WindowsXPWindow>
-        </div>
-        
-        <div className="absolute top-32 right-16 transform -rotate-6 animate-float [animation-delay:2s]">
+      {/* Animated Background Elements & XP Windows - CON BAJA OPACIDAD */}
+      <div className="absolute inset-0">
+        {/* Calculator - CÍRCULO ROJO SUPERIOR IZQUIERDO */}
+        <div className="absolute top-32 right-16 transform -rotate-6 animate-float [animation-delay:2s] opacity-40 hover:opacity-80 transition-opacity duration-300">
           <WindowsXPWindow title="Calculator" icon={<CalculatorIcon />} className="w-48">
             <div className="p-2">
               <div className="bg-white border-2 border-gray-400 p-2 mb-2 text-right text-lg font-mono">
@@ -51,8 +40,46 @@ export function HeroSection() {
             </div>
           </WindowsXPWindow>
         </div>
-        
-        <div className="absolute bottom-32 left-1/4 transform rotate-3 animate-float [animation-delay:4s]">
+
+        {/* Floating XP Windows */}
+        <div className="absolute top-16 left-10 transform rotate-12 animate-float opacity-40 hover:opacity-80 transition-opacity duration-300">
+          <WindowsXPWindow title="Notepad - curriculum.txt" icon={<NotepadIcon />} className="w-64 text-xs">
+            <div className="p-3 h-32 font-mono">
+              <div className="text-blue-600">// Backend Developer</div>
+              <div>Name: Leonardo Verdesoto</div>
+              <div>Skills: C#, .NET, APIs</div>
+              <div>Experience: 5+ años</div>
+              <div className="text-green-600">Status: Available</div>
+            </div>
+          </WindowsXPWindow>
+        </div>
+
+        {/* Sports & Learning - CÍRCULO ROJO INFERIOR IZQUIERDO */}
+        <div className="absolute bottom-20 right-16 transform rotate-4 animate-float [animation-delay:3s] z-20 opacity-40 hover:opacity-80 transition-opacity duration-300">
+          <WindowsXPWindow title="Sports & Learning" icon={<SoccerIcon />} className="w-44 text-xs">
+            <div className="p-2 h-20 font-mono">
+              <div className="text-blue-600">// Deporte & Aprendizaje</div>
+              <div>Fútbol: Delantero</div>
+              <div>Aprender: Siempre</div>
+              <div className="text-yellow-600">Status: Continuo</div>
+            </div>
+          </WindowsXPWindow>
+        </div>
+
+        {/* Creative - CÍRCULO ROJO INFERIOR DERECHO */}
+        <div className="absolute bottom-20 right-8 transform -rotate-5 animate-float [animation-delay:5s] z-20 opacity-40 hover:opacity-80 transition-opacity duration-300">
+          <WindowsXPWindow title="Creative - hobbies.txt" icon={<MusicIcon />} className="w-44 text-xs">
+            <div className="p-2 h-20 font-mono">
+              <div className="text-purple-600">// Creatividad</div>
+              <div>Música: FL Studio</div>
+              <div>Lectura: +50 libros</div>
+              <div className="text-green-600">Status: Activo</div>
+            </div>
+          </WindowsXPWindow>
+        </div>
+
+        {/* Visual Studio Icon */}
+        <div className="absolute bottom-32 left-1/4 transform rotate-3 animate-float [animation-delay:4s] opacity-40 hover:opacity-80 transition-opacity duration-300">
           <div className="xp-desktop-icon">
             <div className="w-8 h-8 mb-1">
               <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 rounded border border-gray-400 flex items-center justify-center">
@@ -63,7 +90,8 @@ export function HeroSection() {
           </div>
         </div>
         
-        <div className="absolute bottom-20 right-1/3 transform -rotate-12 animate-float [animation-delay:1s]">
+        {/* .NET Framework Icon */}
+        <div className="absolute bottom-20 right-1/3 transform -rotate-12 animate-float [animation-delay:1s] opacity-40 hover:opacity-80 transition-opacity duration-300">
           <div className="xp-desktop-icon">
             <div className="w-8 h-8 mb-1">
               <div className="w-full h-full bg-gradient-to-br from-green-400 to-green-600 rounded border border-gray-400 flex items-center justify-center">
@@ -94,7 +122,12 @@ export function HeroSection() {
           {/* Main Title */}
           <div className="mb-6">
             <h1 className="mb-2 text-6xl md:text-8xl chrome-text">
-              Leonardo<span className="text-primary"> </span>Verdesoto
+              <TypingText 
+                text="Leonardo Verdesoto"
+                className="chrome-text"
+                speed={120}
+                delay={1000}
+              />
             </h1>
             <div className="flex items-center justify-center space-x-2 mb-4">
               <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent flex-1"></div>

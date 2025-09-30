@@ -86,3 +86,50 @@ export function ExplorerIcon() {
     </div>
   );
 }
+
+// Hobby Icons
+export function MusicIcon() {
+  return (
+    <div className="w-6 h-6 relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-purple-600 rounded-sm border border-gray-400"></div>
+      <div className="absolute top-2 left-2 w-2 h-2 border-2 border-white rounded-full"></div>
+      <div className="absolute top-3 left-3.5 w-0.5 h-2 bg-white"></div>
+      <div className="absolute top-1.5 left-4 w-1 h-1 bg-white rounded-full"></div>
+    </div>
+  );
+}
+
+export function BookIcon() {
+  return (
+    <div className="w-6 h-6 relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-green-600 rounded-sm border border-gray-400"></div>
+      <div className="absolute top-1 left-1 right-1 h-0.5 bg-white"></div>
+      <div className="absolute top-2 left-1 right-1 h-0.5 bg-white"></div>
+      <div className="absolute top-3 left-1 right-1 h-0.5 bg-white"></div>
+      <div className="absolute top-4 left-1 w-3 h-0.5 bg-white"></div>
+      <div className="absolute bottom-1 right-1 w-1 h-2 bg-white"></div>
+    </div>
+  );
+}
+
+export function SoccerIcon() {
+  return (
+    <div className="w-6 h-6 relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-green-600 rounded-full border border-gray-400"></div>
+      <div className="absolute top-1 left-1 w-4 h-4 border border-white rounded-full"></div>
+      <div className="absolute top-2.5 left-2.5 w-1 h-1 border border-white rounded-full"></div>
+    </div>
+  );
+}
+
+export function LearningIcon() {
+  return (
+    <div className="w-6 h-6 relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-sm border border-gray-400"></div>
+      <div className="absolute top-1 left-1 w-4 h-2 bg-white rounded-sm"></div>
+      <div className="absolute top-2 left-2 w-2 h-0.5 bg-blue-600"></div>
+      <div className="absolute top-3 left-2 w-1.5 h-0.5 bg-blue-600"></div>
+      <div className="absolute top-4 left-1 right-1 h-0.5 bg-yellow-400"></div>
+    </div>
+  );
+}
